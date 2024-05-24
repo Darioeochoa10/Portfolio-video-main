@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galería de Videos - Dario Enrique Ochoa</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -12,18 +20,44 @@
         Volver
       </button>
       <h1>Galería de Videos</h1>
-      <div class="gallery">
-        <!-- Aquí puedes añadir tus videos -->
-        <video controls>
-          <source src="video1.mp4" type="video/mp4" />
-          Tu navegador no soporta la reproducción de videos.
-        </video>
-        <video controls>
-          <source src="video2.mp4" type="video/mp4" />
-          Tu navegador no soporta la reproducción de videos.
-        </video>
-        <!-- Añade más videos según sea necesario -->
+
+      <!-- Primer Carrusel -->
+      <h2>Primer Tipo de Videos</h2>
+      <div class="video-carousel video-carousel-1">
+        <div class="video-item">
+          <iframe src="URL_DEL_VIDEO_1"></iframe>
+        </div>
+        <div class="video-item">
+          <iframe src="URL_DEL_VIDEO_2"></iframe>
+        </div>
+        <!-- Agrega más divs .video-item según sea necesario -->
+      </div>
+
+      <div class="navigation-buttons">
+        <button class="prev-button-1 prev-button">Anterior</button>
+        <button class="next-button-1 next-button">Siguiente</button>
+      </div>
+
+      <!-- Segundo Carrusel -->
+      <h2>Segundo Tipo de Videos</h2>
+      <div class="video-carousel video-carousel-2">
+        <div class="video-item">
+          <iframe src="URL_DEL_VIDEO_3"></iframe>
+        </div>
+        <div class="video-item">
+          <iframe src="URL_DEL_VIDEO_4"></iframe>
+        </div>
+        <!-- Agrega más divs .video-item según sea necesario -->
+      </div>
+
+      <div class="navigation-buttons">
+        <button class="prev-button-2 prev-button">Anterior</button>
+        <button class="next-button-2 next-button">Siguiente</button>
       </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
