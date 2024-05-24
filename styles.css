@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  color: white;
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 24px;
+  color: #d1d1d1;
+}
+
+.eclipse-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.moon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 30%, #fff, #ccc);
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+}
+
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 70% 70%,
+    rgba(0, 0, 0, 0.8),
+    transparent 70%
+  );
+  border-radius: 50%;
+  animation: lunar-eclipse 10s infinite;
+}
+
+@keyframes lunar-eclipse {
+  0%,
+  100% {
+    clip-path: circle(50% at 0% 50%);
+    transform: scale(1);
+  }
+  25% {
+    clip-path: circle(50% at 50% 50%);
+    transform: scale(1.1);
+  }
+  50% {
+    clip-path: circle(50% at 100% 50%);
+    transform: scale(1);
+  }
+  75% {
+    clip-path: circle(50% at 50% 50%);
+    transform: scale(1.1);
+  }
+}
+
+.click-instruction {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+video {
+  width: 300px;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 10px;
+}
