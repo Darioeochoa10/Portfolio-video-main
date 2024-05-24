@@ -202,3 +202,52 @@ button.next:hover {
   background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
   min-height: auto; /* Restaura la altura mínima predeterminada */
 }
+/* Estilo para el cuerpo de la página */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; /* Evita que el contenido sobresalga */
+  background-color: #000;
+  position: relative; /* Posición relativa para los elementos absolutos */
+}
+
+/* DEJO ANOTADO AQUI QUE ESTO HACE QUE SE CREEN ESTRELLAS */
+
+/* Estilo para los puntos (estrellas) */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: twinkling 5s infinite;
+}
+
+/* Keyframes para la animación de parpadeo */
+@keyframes twinkling {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/* Media query para cambiar el tamaño de los puntos en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .star {
+    width: 1px;
+    height: 1px;
+  }
+}
