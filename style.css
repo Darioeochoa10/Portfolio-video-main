@@ -198,29 +198,20 @@ button.next:hover {
 }
 
 /* Estilo específico para la página de carrusel */
-.gallery-body {
-  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-  min-height: auto; /* Restaura la altura mínima predeterminada */
-}
-/* Estilo para el cuerpo de la página */
+/* Estilo específico para la página de galería */
+/* Estilo general para el cuerpo de la página */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  overflow: hidden; /* Evita que el contenido sobresalga */
   background-color: #000;
+  color: white;
   position: relative; /* Posición relativa para los elementos absolutos */
 }
 
-/* DEJO ANOTADO AQUI QUE ESTO HACE QUE SE CREEN ESTRELLAS */
-
-/* Estilo para los puntos (estrellas) */
+/* Fondo animado de estrellas */
 .star {
-  position: absolute;
+  position: fixed; /* Fijar posición de las estrellas */
   width: 2px;
   height: 2px;
   background-color: #fff;
@@ -249,5 +240,201 @@ body {
   .star {
     width: 1px;
     height: 1px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button.prev-button,
+  button.next-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Estilo para el contenedor principal */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 24px;
+  color: #d1d1d1;
+}
+
+/* Estilo para los botones de navegación */
+.navigation-buttons {
+  margin: 20px 0;
+}
+
+button.prev-button,
+button.next-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button.prev-button:hover,
+button.next-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.video-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.video-item {
+  padding: 10px;
+}
+
+/* Estilo específico para la página de galería */
+.gallery-body {
+  overflow-y: auto; /* Permitir desplazamiento vertical */
+  overflow-x: hidden; /* Evitar desplazamiento horizontal */
+}
+
+/* Mantener el fondo animado de estrellas */
+body.gallery-body .star {
+  position: fixed; /* Fijar posición de las estrellas */
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: twinkling 5s infinite;
+}
+
+/* Ajustar el tamaño de los puntos en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  body.gallery-body .star {
+    width: 1px;
+    height: 1px;
+  }
+}
+/* Ajuste para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .back-button {
+    top: 10px; /* Cambia la posición superior */
+    left: 10px; /* Cambia la posición izquierda */
+    padding: 8px 16px; /* Ajusta el padding */
+    font-size: 14px; /* Ajusta el tamaño de fuente */
+    z-index: 1000; /* Asegúrate de que esté por encima del contenido */
+  }
+}
+/* Ajuste para el contenedor del carrusel */
+.video-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-top: 40px; /* Añadir padding superior para el botón "volver" */
+}
+
+@media screen and (max-width: 768px) {
+  .video-carousel {
+    padding-top: 60px; /* Ajusta según sea necesario */
+  }
+}
+/* Estilo para la sección "Sobre Mí" */
+.about-section {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #d1d1d1;
+}
+
+.about-section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #fff;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.about-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h3 {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.about-text a {
+  color: #d1d1d1;
+  text-decoration: none;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.about-text a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .about-section {
+    padding: 15px;
+  }
+
+  .about-section h2 {
+    font-size: 24px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about-text h3 {
+    font-size: 20px;
+  }
+
+  .about-text p {
+    font-size: 16px;
   }
 }
